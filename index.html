@@ -8,50 +8,15 @@
     <title>Nucba NFT</title>
     <link rel="stylesheet" href="/Assets/Styles.css">
     <link rel="stylesheet" href="/Assets/Mediaqueries.css">
-    
+    <link rel="stylesheet" href="/Assets/animaciones.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/Assets/Favicon/icons8-carrito-de-compras-glyph-neue-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/Assets/Favicon/icons8-carrito-de-compras-glyph-neue-16.png" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <main>
-        <!-- hero -->
-        <section id="hero">
-            <div class="hero-info">
-                <h1>Descubre la nueva era de Crypto</h1>
-                <p>NUCBA NFT es el primer Marketplace educativo tecnológico de NFT, que son elementos digitales épicos
-                    que realmente puedes poseer. Los elemmentos digitales existen desde hace mucho tiempo, pero
-                    <span>Nucba</span> como este.
-                </p>
-                <a href="#">Be Nucber</a>
-            </div>
-
-            <div class="hero-card">
-                <img src="/Assets/Imagenes/hero-card.png" alt="BTC de ejemplo">
-
-
-                <div class="hero-card-info">
-                    <div class="hero-card-top">
-                        <h3>The Gratest of all Time</h3>
-                        <span>10</span>
-                    </div>
-
-                    <div class="hero-card-bottom">
-                        <div class="hero-card-creator">
-                            <img src="/Assets/Imagenes/creator.png" alt="creator">
-                            <div class="creator-info">
-                                <p>Creador</p>
-                                <p>Carles Rexach</p>
-                            </div>
-                        </div>
-                        <div class="hero-card-price">
-                            <p>value</p>
-                            <span>9 ETH</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-
         <header>
             <img src="/Assets/Imagenes/logo.png" alt="logo" class="logo">
             <nav class="navbar">
@@ -66,14 +31,17 @@
 
                 <!-- Acá arranca el menu -->
                 <ul class="navbar-list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Descubre</a></li>
-                    <li><a href="#">BTC</a></li>
-                    <li><a href="#">Youtube</a></li>
-                    <li><a href="#">Contáctanos</a></li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#discover">Descubre</a></li>
+                    <li><a href="#products">BTC</a></li>
+                    <li><a href="https://www.youtube.com/@NUCBAok" target="_blank">Youtube</a></li>
+                    <li><a href="https://www.nucba.com.ar/" target="_blank">Contáctanos</a></li>
                 </ul>
                 <label for="cart-toggle" class="cart-label">
-                    <img src="/Assets/Imagenes/cart-icon.svg" alt="carrito de compras" class="cart-icon">
+
+                    <label for="cart-toggle" class="cart-label">
+                        <i class="fa-solid fa-cart-shopping cart-icon">Carrito</i>
+                    </label>
                 </label>
                 <input type="checkbox" id="cart-toggle">
 
@@ -150,10 +118,60 @@
                             <span class="quantity-handler up">+</span>
                         </div>
                     </div>
+
+                    <span class="divider"></span>
+
+                    <div class="cart-total">
+                        <p>Total:</p>
+                        <span>18.3 ETH</span>
+                    </div>
+                    <button class="btn-add">Comprar</button>
                 </div>
+                <!-- Agregamos un div vacio de clase OVERLAY para efecto glass al abrir nuestro menu hamburguesa y carrito -->
+                <div class="overlay"></div>
 
             </nav>
         </header>
+        <!-- hero -->
+        <section id="hero">
+            <div class="hero-info">
+                <h1>Descubre la nueva era de <span>Crypto</span></h1>
+                <p>NUCBA NFT es el primer Marketplace educativo tecnológico de NFT, que son elementos digitales épicos
+                    que realmente puedes poseer. Los elemmentos digitales existen desde hace mucho tiempo, pero
+                    <span>Nucba</span> como este.
+                </p>
+                <a href="#">Be Nucber</a>
+            </div>
+
+            <div class="hero-card">
+                <img src="/Assets/Imagenes/hero-card.png" alt="BTC de ejemplo">
+
+
+                <div class="hero-card-info">
+                    <div class="hero-card-top">
+                        <h3>The Gratest of all Time</h3>
+                        <span>10</span>
+                    </div>
+
+                    <div class="hero-card-bottom">
+                        <div class="hero-card-creator">
+                            <img src="/Assets/Imagenes/creator.png" alt="creator">
+                            <div class="creator-info">
+                                <p>Creador</p>
+                                <p>Carles Rexach</p>
+                            </div>
+                        </div>
+                        <div class="hero-card-price">
+                            <p>value</p>
+                            <span>9 ETH</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
 
         <!-- info -->
         <section id="info">

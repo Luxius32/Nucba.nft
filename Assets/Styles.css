@@ -434,13 +434,13 @@ main {
 /* menu hamburguesa */
 #menu-toggle,
 #cart-toggle,
-.menu-label{
+.menu-label {
     display: none;
 }
 
 
 /* carrito */
-.cart{
+.cart {
     position: absolute;
     top: 65px;
     right: 0;
@@ -450,24 +450,123 @@ main {
     flex-direction: column;
     gap: 30px;
     height: calc(100vh - 65px);
+    width: 400px;
     overflow-y: scroll;
-    display: none;
     z-index: 2;
     background: linear-gradient(to top, #121e3c, var(--background));
+    /* display: none; */
+    /* Le agregamos la animacion */
+    transform: translate(200%);
+    transition: all 0.5s cubic-bezier(0.92, 0.01, 0.35, 0.99);
 }
 
-.cart::-webkit-scrollbar{
+.cart::-webkit-scrollbar {
     display: none;
 }
 
-.cart h2{
+.cart h2 {
     color: var(--text-white);
     font-size: 20px;
     font-weight: 600;
 }
 
-#cart-toggle:checked + .cart{
+.cart-item {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #2323234e;
+    padding: 20px;
+    border: 1px solid var(--electric);
+    border-radius: 10px;
+}
+
+.cart-item img {
+    height: 65px;
+    width: 65px;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-title {
+    color: var(--text-white);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.item-bid {
+    color: var(--text-gray);
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.item-price {
+    background: linear-gradient(to right, #30cfd0, #c43ad6);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.item-handler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quantity-handler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 5px;
+    color: var(--text-white);
+    font-weight: 400;
+}
+
+.item-quantity {
+    color: var(--text-gray);
+}
+
+.up {
+    border: 1px solid var(--electric);
+}
+
+.down {
+    background-color: var(--secondary);
+    border: 1px solid var(--electric);
+}
+
+.divider {
+    margin-top: 20px;
+    border: 0.5px solid var(--electric);
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.cart-total p {
+    color: var(--text-white);
+    font-weight: 700;
+}
+
+.cart-total span {
+    color: var(--text-white);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#cart-toggle:checked+.cart {
+    transform: translate(0%);
+    transition: all 0.5 cubic-bezier(0.92, 0.01, 0.35, 0.99)    ;
 }
 
 /* footer */
@@ -501,12 +600,12 @@ footer span {
 
 /* GRADIENTES */
 
-header{
+header {
     background: linear-gradient(to bottom, #121e3c, var(--background));
 }
 
 .hero-info h1 {
-    background: linear-gradient(to top, #30cfc0,#c43ad6);
+    background: linear-gradient(to top, #30cfc0, #c43ad6);
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
